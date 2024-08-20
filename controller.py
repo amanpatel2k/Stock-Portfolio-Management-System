@@ -22,8 +22,6 @@ def Controllers(self, win, class_name):
         self.w = class_name(self.name)
         self.w.show()
 
-    
-
 def Controller(self,win,stock,class_name):
     if(win == "ClickOnStock"):
         QApplication.closeAllWindows()
