@@ -1,0 +1,15 @@
+{
+    "stock_symbol": "AAPL",
+    "stock_short": "Apple Inc.",
+    "stock_long": "Apple Inc.",
+    "market_ask": "165.2",
+    "market_close": "165.58",
+    "market_open": "163.21",
+    "market_price": "165.35",
+    "market_volume": "55386551",
+    "Analyst_rec": "1.9 - Buy",
+    "market_EPS": "6.05",
+    "market_PE": "27.330578",
+    "market_bid": "165.05",
+    "previous_close_price": "165.58"
+}
