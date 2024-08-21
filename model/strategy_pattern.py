@@ -80,4 +80,3 @@ def strat(strat, stock):
     
     return data
 
-# main('Rsi')

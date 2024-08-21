@@ -61,7 +61,7 @@ class Adaptee_YAHOO(): # decorator impleme
         self.stock = stock
     
     def get_historical_data(self):
-        self.stock_data()
+        return self.stock_data()
 
     def stock_data(self):  
         stock_info = yf.Ticker(self.stock).info
@@ -72,19 +72,19 @@ class Adaptee_YAHOO(): # decorator impleme
         # Implement Decorator End 
 
         data = {
-        'stock_symbol': stock_info['symbol'],
-        'stock_short': stock_info['shortName'],
-        'stock_long': stock_info['longName'],   
-        'market_ask': stock_info['ask'],
-        'market_close': stock_info['Close'],
-        'market_open': stock_info['regularMarketOpen'],
-        'market_price': stock_info['regularMarketPrice'],
-        'market_volume': stock_info['volume'],
-        'Analyst_rec': stock_info['recommendationKey'],
-        'market_EPS': stock_info['trailingEps'],
-        'market_PE': stock_info['trailingPE'],
-        'market_bid': stock_info['bid'],
-        'previous_close_price': stock_info['regularMarketPreviousClose']
+            'stock_symbol': str(stock_info.get('symbol', 'N/A')),
+            'stock_short': str(stock_info.get('shortName', 'N/A')),
+            'stock_long': str(stock_info.get('longName', 'N/A')),
+            'market_ask': str(stock_info.get('ask', 'N/A')),
+            'market_close': str(stock_info.get('Close', 'N/A')),
+            'market_open': str(stock_info.get('regularMarketOpen', 'N/A')),
+            'market_price': str(stock_info.get('regularMarketPrice', 'N/A')),
+            'market_volume': str(stock_info.get('volume', 'N/A')),
+            'Analyst_rec': str(stock_info.get('recommendationKey', 'N/A')),
+            'market_EPS': str(stock_info.get('trailingEps', 'N/A')),
+            'market_PE': str(stock_info.get('trailingPE', 'N/A')),
+            'market_bid': str(stock_info.get('bid', 'N/A')),
+            'previous_close_price': str(stock_info.get('regularMarketPreviousClose', 'N/A'))
         }
         
         with open('stock_data.json', 'w', encoding='utf-8') as f:
@@ -100,7 +100,7 @@ class Adapter():
         """We set the adapted methods in the object's dict"""
         self.__dict__.update(adapted_methods)
  
-def client_code(stock, data_source="Adaptee_URL"):
+def client_code(stock, data_source="Adaptee_YAHOO"):
     
     if data_source == "Adaptee_YAHOO":
         hd = Adaptee_YAHOO(stock)
@@ -109,7 +109,6 @@ def client_code(stock, data_source="Adaptee_URL"):
     
     data_adapter = Adapter(historical_data=hd.get_historical_data)
     hdata = data_adapter.historical_data()
-
     return hdata
 
 def return_json(file):
