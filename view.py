@@ -104,7 +104,7 @@ class smaWindow(QMainWindow):
         super().__init__()
         self.name = name
         self.sma = 'sma'
-        font_size = 15
+        font_size = 25
         offset = 0
         temp = font_size + 5
         self.setGeometry(600, 100, 800, 600)
@@ -285,7 +285,7 @@ class rsiWindow(QMainWindow):
         super().__init__()
         self.name = name
         self.rsi = 'rsi'
-        font_size = 15
+        font_size = 25
         offset = 0
         temp = font_size + 5
         self.setGeometry(600, 100, 800, 600)

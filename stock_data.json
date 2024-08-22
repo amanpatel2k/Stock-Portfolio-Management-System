@@ -1,15 +1,15 @@
 {
-    "stock_symbol": "JNJ",
-    "stock_short": "Johnson & Johnson",
-    "stock_long": "Johnson & Johnson",
-    "market_ask": "160.19",
-    "market_close": "159.63",
-    "market_open": "160.0",
+    "stock_symbol": "AAPL",
+    "stock_short": "Apple Inc.",
+    "stock_long": "Apple Inc.",
+    "market_ask": "226.47",
+    "market_close": "226.51",
+    "market_open": "226.49",
     "market_price": "N/A",
-    "market_volume": "5680502",
+    "market_volume": "33246786",
     "Analyst_rec": "buy",
-    "market_EPS": "6.61",
-    "market_PE": "24.229954",
-    "market_bid": "159.86",
-    "previous_close_price": "159.63"
+    "market_EPS": "6.57",
+    "market_PE": "34.459663",
+    "market_bid": "226.38",
+    "previous_close_price": "226.51"
 }
