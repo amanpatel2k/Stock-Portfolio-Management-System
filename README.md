@@ -34,5 +34,4 @@ The window that displays all the stocks that the user is interested in viewing.
 
 ### Search Feature
 Search for any stock in the list.
-![Portfolio Window](https://github.com/user-attachments/assets/ca5d61e4-cf46-4e3a-8a24-ffeae9bb4bf5)
-
+![Search Features](https://github.com/user-attachments/assets/0e6fe10d-7b26-460d-b811-105ea3afedce)
